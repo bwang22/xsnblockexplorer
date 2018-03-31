@@ -1,6 +1,6 @@
 package com.xsn.explorer.services
 
-import com.xsn.explorer.config.RPCConfig
+import com.xsn.explorer.config.{ConfigKeys, RPCConfig}
 import com.xsn.explorer.errors._
 import com.xsn.explorer.helpers.{DataHelper, Executors, TransactionLoader}
 import com.xsn.explorer.models.{Address, Blockhash}
@@ -22,9 +22,9 @@ class XSNServiceRPCImplSpec extends WordSpec with MustMatchers with ScalaFutures
   val ws = mock[WSClient]
   val ec = Executors.externalServiceEC
   val config = new RPCConfig {
-    override def password: RPCConfig.Password = RPCConfig.Password("pass")
-    override def host: RPCConfig.Host = RPCConfig.Host("localhost")
-    override def username: RPCConfig.Username = RPCConfig.Username("user")
+    override def password: ConfigKeys.Password = ConfigKeys.Password("pass")
+    override def host: ConfigKeys.Host = ConfigKeys.Host("localhost")
+    override def username: ConfigKeys.Username = ConfigKeys.Username("user")
   }
 
   val request = mock[WSRequest]

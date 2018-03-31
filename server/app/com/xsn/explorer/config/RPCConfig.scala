@@ -6,23 +6,16 @@ import play.api.Configuration
 
 trait RPCConfig {
 
-  import RPCConfig._
+  import ConfigKeys._
 
   def host: Host
   def username: Username
   def password: Password
 }
 
-object RPCConfig {
-
-  case class Host(string: String) extends AnyVal
-  case class Username(string: String) extends AnyVal
-  case class Password(string: String) extends AnyVal
-}
-
 class PlayRPCConfig @Inject() (config: Configuration) extends RPCConfig {
 
-  import RPCConfig._
+  import ConfigKeys._
 
   private def get(name: String) = config.get[String](s"rpc.$name")
 
