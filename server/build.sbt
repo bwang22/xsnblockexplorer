@@ -39,6 +39,8 @@ libraryDependencies += "org.slf4j" % "slf4j-api" % "1.7.25"
 libraryDependencies += "ch.qos.logback" % "logback-core" % "1.2.3"
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 
+libraryDependencies += "org.mongodb.scala" %% "mongo-scala-driver" % "2.2.1"
+
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.0" % Test
 libraryDependencies += "com.alexitc" %% "playsonifytest" % playsonifyVersion % Test
 libraryDependencies += "org.mockito" % "mockito-core" % "2.15.0" % Test
