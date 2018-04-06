@@ -6,9 +6,9 @@ export interface ITicker {
   low: number
   volume: number
   vwap: number
-  max_bid: number
-  min_ask: number
-  best_bid: number
-  best_ask: number
+  maxBid: number
+  minAsk: number
+  bestBid: number
+  bestAsk: number
   usd: number
 }
