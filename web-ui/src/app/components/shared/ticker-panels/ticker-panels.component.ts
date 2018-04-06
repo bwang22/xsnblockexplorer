@@ -1,11 +1,11 @@
-import {Component, OnInit} from '@angular/core';
-import {ITicker} from "./iticker";
-import {TickerService} from "./ticker.service";
+import { Component, OnInit } from '@angular/core';
+import { ITicker } from "./iticker";
+import { TickerService } from "./ticker.service";
 
 @Component({
-  selector: 'app-ticker-panels',
-  templateUrl: './ticker-panels.component.html',
-  styleUrls: ['./ticker-panels.component.css']
+	selector: 'app-ticker-panels',
+	templateUrl: './ticker-panels.component.html',
+	styleUrls: [ './ticker-panels.component.css' ]
 })
 export class TickerPanelsComponent implements OnInit {
 
@@ -14,7 +14,7 @@ export class TickerPanelsComponent implements OnInit {
 	ticker: ITicker[] = [];
 	// again: ITicker[] = [];
 
-	constructor(private _tickerService: TickerService){
+	constructor(private _tickerService: TickerService) {
 
 	}
 

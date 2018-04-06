@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {TickerPanelsComponent} from "./ticker-panels/ticker-panels.component";
+import { TickerPanelsComponent } from "./ticker-panels/ticker-panels.component";
 
 @NgModule({
   imports: [
