@@ -12,7 +12,6 @@ export class TickerPanelsComponent implements OnInit {
 	errorMessage: string;
 
 	ticker: ITicker[] = [];
-	// again: ITicker[] = [];
 
 	constructor(private _tickerService: TickerService) {
 
@@ -22,7 +21,6 @@ export class TickerPanelsComponent implements OnInit {
 		this._tickerService.getLastPrice()
 			.subscribe(tickers => {
 				this.ticker = Array.of(tickers);
-				// this.again = this.ticker;
 				console.log(this.ticker)
 			},
 				error => this.errorMessage = <any>error);
