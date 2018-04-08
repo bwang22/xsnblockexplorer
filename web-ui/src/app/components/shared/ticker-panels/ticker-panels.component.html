@@ -1,0 +1,80 @@
+<body>
+	<div class="row" style="margin: 0 -30px 0 -30px" id="ticker-panels">
+		<div class="col-md-6" style="padding:0">
+			<div class="col-xs-4">
+				<div class="panel panel-default">
+					<div class="panel-heading"> BTC Price
+						<a class="glyphicon glyphicon-asterisk" style="font-size: 65%;top: -3px;"></a>
+					</div>
+					<div class="panel-body">
+						<span id="tickerLast" *ngFor="let ticker of ticker">{{ticker.last}}
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">USD price&nbsp;
+						<a class="glyphicon glyphicon-asterisk" style="font-size: 65%;top: -3px;"></a>
+					</div>
+					<div class="panel-body">
+						<span id="tickerUSD" *ngFor="let ticker of ticker">{{ticker.usd}}</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">Market&nbsp;Cap&nbsp;
+					</div>
+					<div class="panel-body">
+						<span>
+							<a href="https://coinmarketcap.com/currencies/posw-coin/" id="marketCap" target="_blank" rel="noopener">TBD on CMC</a>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">Known Peers</div>
+				<div class="panel-body">
+					<span id="connections">
+						<a href="#!network">
+							<i class="glyphicon glyphicon-flash">
+
+							</i> 19
+						</a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">Difficulty</div>
+				<div class="panel-body">
+					<span>
+						<a href="" onclick="showChart('diff'); return false" id="difficulty">0.3435
+							<span class="glyphicon glyphicon-arrow-down">
+
+							</span>
+						</a>
+					</span>
+
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">Outstanding</div>
+				<div class="panel-body">
+					<span>
+						<a href="" onclick="showChart('inflation'); return false" id="outstanding">133,650,386 C2</a>
+					</span>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+<div *ngIf='errorMessage' class='alert alert-danger'>
+	Error: {{ errorMessage }}
+</div>

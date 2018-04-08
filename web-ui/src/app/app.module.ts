@@ -29,6 +29,8 @@ import { FinderComponent } from './components/finder/finder.component';
 import { AddressDetailsComponent } from './components/address-details/address-details.component';
 import { BlockDetailsComponent } from './components/block-details/block-details.component';
 import { LatestBlocksComponent } from './components/latest-blocks/latest-blocks.component';
+import { TickerService } from "./components/shared/ticker-panels/ticker.service";
+import { TickerPanelsComponent } from "./components/shared/ticker-panels/ticker-panels.component";
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { LatestBlocksComponent } from './components/latest-blocks/latest-blocks.
     FinderComponent,
     AddressDetailsComponent,
     BlockDetailsComponent,
-    LatestBlocksComponent
+    LatestBlocksComponent,
+    TickerPanelsComponent
   ],
   imports: [
     AppRoutingModule,
@@ -66,8 +69,9 @@ import { LatestBlocksComponent } from './components/latest-blocks/latest-blocks.
     LanguageService,
     NavigatorService,
     NotificationService,
-    TransactionsService
+    TransactionsService,
+    TickerService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
